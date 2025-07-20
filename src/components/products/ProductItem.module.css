@@ -1,0 +1,34 @@
+.productItem {
+  list-style: none;
+  border-radius: 6px;
+  /* overflow: hidden; */
+}
+
+.productLink {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.productImage {
+  width: 100%;
+  border-radius: 6px;
+  transition: transform 0.2s ease-in;
+}
+.productImage:hover {
+  transform: scale(1.01);
+}
+
+.productName {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
