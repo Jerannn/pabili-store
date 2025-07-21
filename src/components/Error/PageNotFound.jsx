@@ -1,15 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigateBack } from "../hooks/useNavigateBack";
 
 function PageNotFound() {
-  const navigate = useNavigate();
-  const handleBack = () => {
-    navigate(-1);
-  };
+  const navigateBack = useNavigateBack();
 
   return (
     <div>
       This Page doesn't Exist!
-      <Link onClick={handleBack}>Go back</Link>
+      <Link onClick={navigateBack}>Go back</Link>
     </div>
   );
 }
