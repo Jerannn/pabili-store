@@ -1,0 +1,71 @@
+.radioButton {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.radioButton label {
+  color: #414552;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.radioButton label:hover,
+.radioButton input[type="radio"]:hover ~ label {
+  color: #14134e;
+}
+
+.radioButton input[type="radio"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(64, 68, 82, 0.16) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(64, 68, 82, 0.08) 0px 2px 5px 0px;
+  transition: all 240ms ease;
+  margin: 0;
+  vertical-align: middle;
+}
+.radioButton input[type="radio"]:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  transition: all 240ms ease-in-out;
+}
+.radioButton input[type="radio"]:checked {
+  background-color: rgb(99, 91, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgb(99, 91, 255) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(64, 68, 82, 0.08) 0px 2px 5px 0px;
+}
+.radioButton input[type="radio"]:checked:focus {
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(1, 150, 237, 0.36) 0px 0px 0px 4px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px,
+    rgb(99, 91, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(64, 68, 82, 0.08) 0px 2px 5px 0px;
+}
+.radioButton input[type="radio"]:checked:after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: #2e69eb 0px 0px 0px 1px;
+}
