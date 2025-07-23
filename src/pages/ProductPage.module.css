@@ -36,6 +36,7 @@
 
 .productDetails {
   width: 50%;
+  margin-top: 2rem;
 }
 
 .productName {
@@ -84,16 +85,55 @@
   font-size: 1.4rem;
   font-weight: 400;
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .sizeList {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .productColors {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 1rem;
+}
+
+.productQuantity {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.counter {
+  max-width: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e9eaeb;
+  padding: 1rem;
+}
+
+.counterBtn {
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.counterValue {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.thinIcon {
+  stroke-width: 1;
 }

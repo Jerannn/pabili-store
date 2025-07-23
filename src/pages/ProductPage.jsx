@@ -7,6 +7,9 @@ import Button from "../components/Button";
 import Ratings from "../components/Ratings";
 import RadioButton from "../components/RadioButton";
 
+import { FiMinus } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
+
 function ProductPage() {
   const { productId } = useParams();
   const { products, isLoading } = useProduct();
@@ -37,6 +40,7 @@ function ProductPage() {
           <img src={image} alt="" className={styles.bottomImage} />
         </div>
       </div>
+
       <div className={styles.productDetails}>
         <h1 className={styles.productName}>{name}</h1>
 
@@ -51,23 +55,38 @@ function ProductPage() {
           <section className={styles.productAvailableSizes}>
             <h3 className={styles.label}>Available Size</h3>
             <ul className={styles.sizeList}>
-              <Button label={"S"} isActive={true} />
-              <Button label={"M"} />
-              <Button label={"L"} />
-              <Button label={"XL"} />
+              <Button label="S" isActive={true} />
+              <Button label="M" />
+              <Button label="L" />
+              <Button label="XL" />
             </ul>
           </section>
 
           <section className="productAvailableColors">
             <h3 className={styles.label}>Available Color</h3>
             <ul className={styles.productColors}>
-              <RadioButton label={"Red"} />
-              <RadioButton label={"White"} />
-              <RadioButton label={"Beige"} />
-              <RadioButton label={"Navy"} />
+              <RadioButton label="Red" />
+              <RadioButton label="White" />
+              <RadioButton label="Beige" />
+              <RadioButton label="Navy" />
             </ul>
           </section>
         </div>
+
+        <div className={styles.productQuantity}>
+          <div className={styles.counter}>
+            <button className={styles.counterBtn}>
+              <FiMinus size={20} className={styles.thinIcon} />
+            </button>
+            <span className={styles.counterValue}>1</span>
+            <button className={styles.counterBtn}>
+              <FiPlus size={20} className={styles.thinIcon} />
+            </button>
+          </div>
+          <h3 className={styles.label}>5 stock left</h3>
+        </div>
+
+        <Button label="Add to cart" isActive={true} padding="md" />
       </div>
     </section>
   );
