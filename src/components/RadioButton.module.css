@@ -36,6 +36,7 @@
   transition: all 240ms ease;
   margin: 0;
   vertical-align: middle;
+  cursor: pointer;
 }
 .radioButton input[type="radio"]:after {
   content: "";
@@ -52,20 +53,20 @@
   transition: all 240ms ease-in-out;
 }
 .radioButton input[type="radio"]:checked {
-  background-color: rgb(99, 91, 255);
+  background-color: var(--primary-color);
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgb(99, 91, 255) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, var(--primary-color) 0px 0px 0px 1px,
     rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(64, 68, 82, 0.08) 0px 2px 5px 0px;
 }
 .radioButton input[type="radio"]:checked:focus {
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgba(1, 150, 237, 0.36) 0px 0px 0px 4px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px,
-    rgb(99, 91, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(30, 42, 56, 0.1) 0px 0px 0px 4px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px,
+    var(--primary-color) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(64, 68, 82, 0.08) 0px 2px 5px 0px;
 }
 .radioButton input[type="radio"]:checked:after {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  box-shadow: #2e69eb 0px 0px 0px 1px;
+  box-shadow: #4b5560 0px 0px 0px 1px;
 }

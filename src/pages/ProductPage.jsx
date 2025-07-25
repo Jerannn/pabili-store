@@ -5,10 +5,10 @@ import Spinner from "../components/Spinner";
 import styles from "./ProductPage.module.css";
 import Button from "../components/Button";
 import Ratings from "../components/Ratings";
-import RadioButton from "../components/RadioButton";
 
-import { FiMinus } from "react-icons/fi";
-import { FiPlus } from "react-icons/fi";
+import SizeSelector from "../components/products/SizeSelector";
+import ColorSelector from "../components/products/ColorSelector";
+import QuantityCounter from "../components/products/QuantityCounter";
 
 function ProductPage() {
   const { productId } = useParams();
@@ -54,35 +54,17 @@ function ProductPage() {
         <div className={styles.options}>
           <section className={styles.productAvailableSizes}>
             <h3 className={styles.label}>Available Size</h3>
-            <ul className={styles.sizeList}>
-              <Button label="S" isActive={true} />
-              <Button label="M" />
-              <Button label="L" />
-              <Button label="XL" />
-            </ul>
+            <SizeSelector sizes={["s", "m", "l", "xl"]} />
           </section>
 
           <section className="productAvailableColors">
             <h3 className={styles.label}>Available Color</h3>
-            <ul className={styles.productColors}>
-              <RadioButton label="Red" />
-              <RadioButton label="White" />
-              <RadioButton label="Beige" />
-              <RadioButton label="Navy" />
-            </ul>
+            <ColorSelector colors={["red", "white", "navy", "beige"]} />
           </section>
         </div>
 
         <div className={styles.productQuantity}>
-          <div className={styles.counter}>
-            <button className={styles.counterBtn}>
-              <FiMinus size={20} className={styles.thinIcon} />
-            </button>
-            <span className={styles.counterValue}>1</span>
-            <button className={styles.counterBtn}>
-              <FiPlus size={20} className={styles.thinIcon} />
-            </button>
-          </div>
+          <QuantityCounter />
           <h3 className={styles.label}>5 stock left</h3>
         </div>
 
